@@ -20,6 +20,10 @@ variable "lookup_latest_ami" {
   default = false
 }
 
+variable "security_groups" {
+  type = "list"
+}
+
 variable "root_block_device_type" {
   default = "gp2"
 }
