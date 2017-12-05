@@ -166,6 +166,7 @@ resource "aws_launch_configuration" "container_instance" {
   key_name        = "${var.key_name}"
   security_groups = ["${var.security_groups}"]
   user_data       = "${data.template_cloudinit_config.container_instance_cloud_config.rendered}"
+  associate_public_ip_address = true
 }
 
 resource "aws_autoscaling_group" "container_instance" {
